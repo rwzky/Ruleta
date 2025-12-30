@@ -1,1 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Ruleta de Nombres</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
 
+  <div class="topbar">
+    <h1>Ruleta de Nombres</h1>
+    <p>Click en Girar para elegir un nombre. Se elimina al salir.</p>
+  </div>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="listHeader">
+        <strong>Participantes</strong>
+        <span id="count">0</span>
+      </div>
+      <div class="listBox">
+        <ul id="list"></ul>
+      </div>
+
+      <div class="row" style="margin-top:12px">
+        <button id="btnSpin" class="primary">Girar</button>
+        <button id="btnReset" class="ghost">Reiniciar</button>
+      </div>
+
+      <div class="hint" id="status"></div>
+    </section>
+
+    <section class="wheelArea">
+      <div class="wheelWrap">
+        <div class="pointer"></div>
+        <div id="wheel" class="wheel"></div>
+      </div>
+
+      <div class="result">
+        <div class="resultLabel">Ganador</div>
+        <div class="winner" id="winner">—</div>
+        <div style="margin-top:8px;text-align:center">
+          <img id="winnerImg" src="" alt="" style="max-width:160px;border-radius:12px;display:none;" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
